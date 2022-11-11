@@ -28,5 +28,5 @@ Finding Near By Hospitals
 Achievements & Rewards
 
 # Advanced Functions
-1- A client can ask the server to send him the list of connected players
-2- Clients can chat
+&nbsp;&nbsp;1- A client can ask the server to send him the list of connected players<br />
+&nbsp;&nbsp;2- Clients can chat
