@@ -23,8 +23,8 @@ Message 6: The GameServer verifies whether the received username and ticket corr
    
    
 # Features
-Note that generated tickets are valid for a single round only, and a single player can play multiple rounds.  Once 3 clients are accepted, the Game server generates a Word (MysterWord) and then sends ReadyToStart for all Clients. The clients should predict this word they have 10 attempts.
-Finding Near By Hospitals
+Note that generated tickets are valid for a single round only, and a single player can play multiple rounds.  Once 3 clients are accepted, the Game server generates a Word (MysterWord) 
+
 Achievements & Rewards
 
 # Advanced Functions
