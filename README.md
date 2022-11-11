@@ -9,17 +9,17 @@ Message 2: The authentication server establishes a connection with the GameServe
 Message 3: The GameServer replies by the message TicketSaved:username.
 
 Message 4: The AuthServer sends to the client the authentication response. This response should respect the following format:<br />
-     • Ok:ticket (example: Ok:2398768 ) if the username and password matches the ones in his possession. <br />
-     • AuthenticationFailure in the case of an unsuccessful authentication<br />
+   &nbsp;&nbsp;  • Ok:ticket (example: Ok:2398768 ) if the username and password matches the ones in his possession. <br />
+  &nbsp;&nbsp;   • AuthenticationFailure in the case of an unsuccessful authentication<br />
      
      
 Message 5: The client then sends to the Game server the received ticket. This message should respect the following format: Ticket:username:ticket 
 
 Message 6: The GameServer verifies whether the received username and ticket correspond to the information saved on the server after receiving Message 2. The server sends then to the client the response which should respect the following format:<br />
-    •  InvalidAuthentication in the case where the ticket or the username are invalid<br />
-    •  WaitingPlayers in the case where the ticket and the username are valid but the number of connected clients having valid tickets is less than 3 <br />
-    •  ReadyToStart in the case where the following two conditions are verified 1. The ticket and the username are valid, and 2. 3 clients having valid tickets are<br />            connected
-   • Noplace in the case where the number of clients having valid tickets is greater than 3. In this case, the concerned client can't participate in this round. <br />
+ &nbsp;&nbsp;   •  InvalidAuthentication in the case where the ticket or the username are invalid<br />
+  &nbsp;&nbsp;  •  WaitingPlayers in the case where the ticket and the username are valid but the number of connected clients having valid tickets is less than 3 <br />
+   &nbsp;&nbsp; •  ReadyToStart in the case where the following two conditions are verified 1. The ticket and the username are valid, and 2. 3 clients having valid tickets are<br />            connected<br />
+  &nbsp;&nbsp; • Noplace in the case where the number of clients having valid tickets is greater than 3. In this case, the concerned client can't participate in this round. <br />
    
    
 # Features
