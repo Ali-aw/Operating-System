@@ -6,6 +6,12 @@ Message 1: for each round, the client contacts the server AuthServer by sending 
 
 Message 2: The authentication server establishes a connection with the GameServer, and then sends the generated ticket to the authenticated user. This message respects the following format: Ticket:username:ticket Example: Ticket:Fadi:2398768 Upon receiving this message, the GameServer saves the username and the received ticket
 
+Message 3: The GameServer replies by the message TicketSaved:username.
+
+Message 4: The AuthServer sends to the client the authentication response. This response should respect the following format:
+     • Ok:ticket (example: Ok:2398768 ) if the username and password matches the ones in his possession. 
+     • AuthenticationFailure in the case of an unsuccessful authentication
+     
 # Features
 Easy contact between blood donor and blood recipient through this android application.
 Included:
