@@ -12,13 +12,21 @@ Message 4: The AuthServer sends to the client the authentication response. This 
      • Ok:ticket (example: Ok:2398768 ) if the username and password matches the ones in his possession. 
      • AuthenticationFailure in the case of an unsuccessful authentication
      
-# Features
-Easy contact between blood donor and blood recipient through this android application.
-Included:
+     
+Message 5: The client then sends to the Game server the received ticket. This message should respect the following format: Ticket:username:ticket 
 
-User Databases
-User Login & Sign up
-Donor Details
-Finding blood group easily
+Message 6: The GameServer verifies whether the received username and ticket correspond to the information saved on the server after receiving Message 2. The server sends then to the client the response which should respect the following format:
+    •  InvalidAuthentication in the case where the ticket or the username are invalid
+    •  WaitingPlayers in the case where the ticket and the username are valid but the number of connected clients having valid tickets is less than 3 
+    •  ReadyToStart in the case where the following two conditions are verified 1. The ticket and the username are valid, and 2. 3 clients having valid tickets are            connected
+   • Noplace in the case where the number of clients having valid tickets is greater than 3. In this case, the concerned client can't participate in this round. 
+   
+   
+# Features
+Note that generated tickets are valid for a single round only, and a single player can play multiple rounds.  Once 3 clients are accepted, the Game server generates a Word (MysterWord) and then sends ReadyToStart for all Clients. The clients should predict this word they have 10 attempts.
 Finding Near By Hospitals
 Achievements & Rewards
+
+# Advanced Functions
+1- A client can ask the server to send him the list of connected players
+2- Clients can chat
