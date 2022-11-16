@@ -23,9 +23,8 @@ Message 6: The GameServer verifies whether the received username and ticket corr
    
    
 # Features
-Note that generated tickets are valid for a single round only, and a single player can play multiple rounds.  Once 3 clients are accepted, the Game server generates a Word (MysterWord) 
+Note that generated tickets are valid for a single round only, and a single player can play multiple rounds.  Once 3 clients are accepted, the Game begins
 
-Achievements & Rewards
 
 # Advanced Functions
 &nbsp;&nbsp;1- A client can ask the server to send him the list of connected players<br />
